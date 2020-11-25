@@ -1,4 +1,4 @@
-package com.example.viewpagetest;
+package com.example.viewpagetest.adpter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

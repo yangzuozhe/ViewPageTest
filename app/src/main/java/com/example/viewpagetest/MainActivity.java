@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.example.viewpagetest.adpter.MainFragmentAdapter;
 import com.example.viewpagetest.fragment.MyFragment1;
 import com.example.viewpagetest.fragment.MyFragment2;
-import com.example.viewpagetest.pagetransformer.DepthPageTransformer;
 import com.example.viewpagetest.pagetransformer.ZoomOutPageTransformer;
 import com.example.viewpagetest.view.MyView1;
 import com.example.viewpagetest.view.MyView2;

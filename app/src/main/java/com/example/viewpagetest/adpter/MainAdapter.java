@@ -1,4 +1,4 @@
-package com.example.viewpagetest;
+package com.example.viewpagetest.adpter;
 
 import android.view.View;
 import android.view.ViewGroup;
