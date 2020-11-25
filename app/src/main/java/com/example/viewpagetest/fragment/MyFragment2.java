@@ -24,4 +24,13 @@ public class MyFragment2 extends Fragment {
         View view = inflater.inflate(R.layout.xml_page2, null);
         return view;
     }
+
+    public static MyFragment2 newInstance() {
+
+        Bundle args = new Bundle();
+
+        MyFragment2 fragment = new MyFragment2();
+        fragment.setArguments(args);
+        return fragment;
+    }
 }

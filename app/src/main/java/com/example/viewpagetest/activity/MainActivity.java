@@ -1,4 +1,4 @@
-package com.example.viewpagetest;
+package com.example.viewpagetest.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.example.viewpagetest.R;
 import com.example.viewpagetest.adpter.MainFragmentAdapter;
 import com.example.viewpagetest.fragment.MyFragment1;
 import com.example.viewpagetest.fragment.MyFragment2;
