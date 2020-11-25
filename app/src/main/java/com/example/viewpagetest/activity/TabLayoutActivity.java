@@ -29,6 +29,7 @@ public class TabLayoutActivity extends AppCompatActivity {
         TabLayout.Tab tab1 = mTlMyTab.newTab();
         //我们可以给这个标签命名
         tab1.setText("你好");
+        //将我们要添加的tag存放进tab中，在TabLayout的点击事件中将其取出来。
         tab1.setTag(MyFragment1.newInstance());
 
         TabLayout.Tab tab2 = mTlMyTab.newTab();
@@ -68,6 +69,12 @@ public class TabLayoutActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * 用来将碎片添加到 父布局 FrameLayout 中
+     *
+     * @param fragment 需要添加的碎片类
+     * @param parentId 父布局的id
+     */
     public void replaceFragment(Fragment fragment, int parentId) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();

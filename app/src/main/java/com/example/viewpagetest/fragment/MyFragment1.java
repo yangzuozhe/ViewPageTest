@@ -25,8 +25,10 @@ public class MyFragment1 extends Fragment {
         return view;
     }
 
+    /**
+     * 推荐使用这个方法（或者getInstance）来获得Fragment1，而不是使用构造方法
+     */
     public static MyFragment1 newInstance() {
-
         Bundle args = new Bundle();
         MyFragment1 fragment = new MyFragment1();
         fragment.setArguments(args);
