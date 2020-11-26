@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/tvText"
+        android:id="@+id/tvCustomText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="我是自定义标签"
@@ -16,8 +16,8 @@
         android:layout_height="20dp"
         android:layout_marginStart="20dp"
         android:background="@drawable/ic_launcher_background"
-        app:layout_constraintStart_toEndOf="@+id/tvText"
-        app:layout_constraintTop_toTopOf="@+id/tvText" />
+        app:layout_constraintStart_toEndOf="@+id/tvCustomText"
+        app:layout_constraintTop_toTopOf="@+id/tvCustomText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

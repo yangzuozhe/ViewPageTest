@@ -14,11 +14,13 @@ import com.example.viewpagetest.R;
 
 public class ViewPagerTabLayoutFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
+    public static final String NAME = "NAME";
     private int mPage;
-
-    public static ViewPagerTabLayoutFragment newInstance(int page) {
+    private String mName;
+    public static ViewPagerTabLayoutFragment newInstance(int page,String name) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
+        args.putString(NAME,name);
         ViewPagerTabLayoutFragment fragment = new ViewPagerTabLayoutFragment();
         fragment.setArguments(args);
         return fragment;
@@ -29,6 +31,7 @@ public class ViewPagerTabLayoutFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mPage = getArguments().getInt(ARG_PAGE);
+            mName = getArguments().getString(NAME);
         }
     }
 
@@ -36,8 +39,8 @@ public class ViewPagerTabLayoutFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.viewpager_tablayout_item, null);
-        TextView textView = view.findViewById(R.id.tvText);
-        textView.setText("Fragment #" + mPage);
+        TextView textView = view.findViewById(R.id.tvCustomText);
+        textView.setText("Fragment #" + mPage+mName);
         return view;
     }
 
