@@ -29,4 +29,6 @@ public class ViewPagerTagLayoutAdapter2 extends PagerAdapter {
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return false;
     }
+
+
 }

@@ -1,10 +1,10 @@
 package com.example.viewpagetest.bean;
 
-public class InfoBean {
+public class infoBean {
     private String name;
     private String tabName;
 
-    public InfoBean(String name, String tabName) {
+    public infoBean(String name, String tabName) {
         this.name = name;
         this.tabName = tabName;
     }
