@@ -1,6 +1,8 @@
 package com.example.viewpagetest.bean;
 
-public class infoBean {
+import java.io.Serializable;
+
+public class infoBean implements Serializable {
     private String name;
     private String tabName;
 
