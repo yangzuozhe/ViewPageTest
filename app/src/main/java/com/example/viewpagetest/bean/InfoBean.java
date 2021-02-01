@@ -2,11 +2,14 @@ package com.example.viewpagetest.bean;
 
 import java.io.Serializable;
 
-public class infoBean implements Serializable {
+/**
+ * @author Administrator
+ */
+public class InfoBean implements Serializable {
     private String name;
     private String tabName;
 
-    public infoBean(String name, String tabName) {
+    public InfoBean(String name, String tabName) {
         this.name = name;
         this.tabName = tabName;
     }

@@ -3,8 +3,6 @@ package com.example.viewpagetest.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,18 +10,21 @@ import android.widget.TextView;
 
 import com.example.viewpagetest.R;
 import com.example.viewpagetest.adpter.ViewPagerTabLayoutAdapter;
-import com.example.viewpagetest.bean.infoBean;
+import com.example.viewpagetest.bean.InfoBean;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 这个类这样写viewPager 和 tabLayout 进行结合是不对的
+ */
 public class ViewPagerTabLayoutActivity extends AppCompatActivity {
     TabLayout mTabLayout;
     ViewPager mViewPager;
     ViewPagerTabLayoutAdapter mAdapter;
     List<View> viewList = new ArrayList<>();
-    List<infoBean> beanList = new ArrayList<>();
+    List<InfoBean> beanList = new ArrayList<>();
 
 
     @Override
@@ -41,8 +42,8 @@ public class ViewPagerTabLayoutActivity extends AppCompatActivity {
 
     public void initBean() {
         //首先创建数据bean类
-        for (int i = 0; i < 4; i++) {
-            beanList.add(new infoBean("view" + i, "tab" + i));
+        for (int i = 0; i < 6; i++) {
+            beanList.add(new InfoBean("view" + i, "tab" + i));
         }
     }
 
@@ -78,7 +79,8 @@ public class ViewPagerTabLayoutActivity extends AppCompatActivity {
             mTabLayout.getTabAt(i).setCustomView(mAdapter.getTabList(i));
         }
         //这是让tab 填充整个横面屏幕的方法（用这个MODE_FIXED）
-        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
+        mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        mViewPager.setCurrentItem(2);
         //这是tab的监听事件
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -86,7 +88,9 @@ public class ViewPagerTabLayoutActivity extends AppCompatActivity {
                 //这里是选中某个tab 的方法
                 //我们从我们自定义的view中获取textView，然后给他设置 Selected
                 final TextView myTv = tab.getCustomView().findViewById(R.id.tvCustomText);
+//                final View viewUnderLine = tab.getCustomView().findViewById(R.id.viewUnderLine);
                 myTv.setSelected(true);
+//                viewUnderLine.setSelected(true);
             }
 
             @Override

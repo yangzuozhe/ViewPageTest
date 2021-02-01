@@ -7,23 +7,22 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.viewpagetest.bean.infoBean;
+import com.example.viewpagetest.bean.InfoBean;
 import com.example.viewpagetest.fragment.ViewPagerTabLayoutFragment;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.List;
 
 public class ViewPagerTabLayoutAdapter extends FragmentPagerAdapter {
-    List<infoBean> mBeanList;
+    List<InfoBean> mBeanList;
     List<View> mViewList;
 
-    public ViewPagerTabLayoutAdapter(@NonNull FragmentManager fm, List<infoBean> beanList) {
+    public ViewPagerTabLayoutAdapter(@NonNull FragmentManager fm, List<InfoBean> beanList) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mBeanList = beanList;
     }
 
     //获取数据bean类，获取我们自定义的view
-    public ViewPagerTabLayoutAdapter(@NonNull FragmentManager fm, List<infoBean> beanList, List<View> tabList) {
+    public ViewPagerTabLayoutAdapter(@NonNull FragmentManager fm, List<InfoBean> beanList, List<View> tabList) {
         this(fm, beanList);
         mViewList = tabList;
     }

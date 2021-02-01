@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.viewpagetest.R;
-import com.example.viewpagetest.bean.infoBean;
+import com.example.viewpagetest.bean.InfoBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +21,13 @@ public class ViewPagerTabLayoutFragment extends Fragment implements View.OnClick
     public static final String ARG_PAGE = "ARG_PAGE";
     public static final String NAME = "NAME";
     private int mPage;
-    private infoBean mInfoBean;
+    private InfoBean mInfoBean;
     private Button mMyButton;
 
     /**
      * 他推荐用newInstance方法来获取取Fragment对象以及传值
      */
-    public static ViewPagerTabLayoutFragment newInstance(int page, infoBean info) {
+    public static ViewPagerTabLayoutFragment newInstance(int page, InfoBean info) {
         //用Bundle存值
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -46,7 +46,7 @@ public class ViewPagerTabLayoutFragment extends Fragment implements View.OnClick
         //在初始化Fragment的时候获取值
         if (getArguments() != null) {
             mPage = getArguments().getInt(ARG_PAGE);
-            mInfoBean = (infoBean) getArguments().getSerializable(NAME);
+            mInfoBean = (InfoBean) getArguments().getSerializable(NAME);
         }
     }
 

@@ -14,10 +14,12 @@ import com.example.viewpagetest.fragment.MyFragment2;
 import com.example.viewpagetest.fragment.MyFragment3;
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ * @author Administrator
+ */
 public class TabLayoutActivity extends AppCompatActivity {
     TabLayout mTlMyTab;
     FrameLayout mFlMyFl;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
