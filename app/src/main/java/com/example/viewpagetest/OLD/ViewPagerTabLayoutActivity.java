@@ -1,4 +1,4 @@
-package com.example.viewpagetest.activity;
+package com.example.viewpagetest.OLD;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;

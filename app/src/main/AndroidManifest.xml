@@ -9,19 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.NewViewPagerActivity">
+        <activity android:name=".viewpager2.ViewPager2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TabLayoutActivity">
+        <activity android:name=".activity.NewViewPagerActivity">
 
         </activity>
-        <activity android:name=".activity.ViewPagerTabLayoutActivity">
-
-        </activity>
+        <activity android:name=".activity.TabLayoutActivity"></activity>
+        <activity android:name=".OLD.ViewPagerTabLayoutActivity"></activity>
         <activity android:name=".activity.MainActivity" />
     </application>
 
